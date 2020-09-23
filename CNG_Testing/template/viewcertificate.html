@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CNG INDIA</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href='{%static "css/main.css"%}' />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="{%static 'js/jquery.min.js'%}"></script>
+			<script src='{%static "js/jquery.scrolly.min.js"%}'></script>
+			<script src='{%static "js/skel.min.js"%}'></script>
+			<script src='{%static "js/util.js"%}'></script>
+			<script src='{%static "js/main.js"%}'></script>
+		<style type="text/css">
+			.carousel-item {
+				height: 100vh;
+				min-height: 350px;
+				background: no-repeat center center scroll;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				}
+				h2{
+					color: greenyellow;
+					margin-top: 1rem;
+				}
+				p{
+					font-family: "Open Sans", Arial, sans-serif;
+				    font-weight: 400;
+				    font-size: 16px;
+				    line-height: 1.7;
+				    color: #828282;
+
+}
+				}
+							table {
+									width:100%;
+									}
+									table, th, td {
+									border: 1px solid black;
+									border-collapse: collapse;
+									}
+									th, td {
+									padding: 15px;
+									text-align: left;
+									}
+									table#t01 tr:nth-child(even) {
+									background-color: #eee;
+									}
+									table#t01 tr:nth-child(odd) {
+									background-color: #fff;
+									}
+									table#t01 th {
+									background-color: black;
+									color: white;
+									}
+	
+
+		</style>
+	</head>
+	<body>
+			<header id="header">
+				<nav class="left">
+					<a href="#menu" style="color:blue"><span>Menu</span></a>
+				</nav>
+				<img class="logo" src='{%static "images/OG_logo_png.png"%}'></a>
+				<nav class="right">
+					<a href="{%url 'login' %}" class="button alt">Create Certificate</a>
+				</nav>
+			</header>
+			<nav id="menu">
+				<ul class="links">
+					<li><a href='{%url "index" %}'>Home</a></li>
+					
+				</ul>
+				
+			</nav>
+
+  <main>
+	<div class="s01" >
+		
+      <form method="POST" >
+        	{% csrf_token %}
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+            <input id="search" type="text" placeholder="ENTER YOUR CERTIFICATE NO" name="search"/>
+          </div>
+        
+          <div class=" third-wrap">
+            <input type="submit" name="Search" value="Search">
+		  </div>
+		  
+	<div>	 
+        </div>
+	  </form>
+    </div>
+	</main>
+	<!-- <div>
+		<div>
+			
+			<table style="width:100%">
+					
+					<tr>
+					  <th>Vahicle Name</th>
+					  <th>Vahicle Number</th>
+					  <th>Cylinder Weight</th>
+					</tr>
+					{% for cng in cngmodel %}
+					{% if cng.vahicle_no == title %}
+					<tr>
+					  <td>{{cng.vahicle_name}}</td>
+					  <td>{{cng.vahicle_no}}</td>
+					  <td>{{cng.cylinder_weight}}</td>
+					</tr>
+					{% endif %}
+					{% endfor %}
+				  </table>
+				  
+		</div>
+	</div> -->
+			<footer id="footer">
+				<div class="inner">
+					<h2>Get In Touch</h2>
+					<ul class="actions">
+						<li><span class="icon fa-phone"></span> <a href="#">(+91) 9892064026</a></li>
+						<li><span class="icon fa-phone"></span> <a href="#">(+91) 9702290776</a></li>
+						<li><span class="icon fa-phone"></span> <a href="#">kwkcng@gmail.com</a></li>
+						<li><span class="icon fa-envelope"></span> <a href="#">CNG INDIA</a></li>
+						<div class="container"><li><span class="icon fa-map-marker"></span>Servey No.104/6, Thakur Pada Road
+							,Opp.Irani Masjid,Dhaisar Naka,Mumbra-Panvel Road,District-Thane-400612,Maharashtra</li>
+						</div>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; 2019 CNG. All Rights Reserved.<a href="#">CNG INDIA</a>
+				</div>
+			</footer>
+		
+		
+	</body>
+</html>

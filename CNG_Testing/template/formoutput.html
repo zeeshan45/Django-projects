@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View Certificate</title>
+    <link rel="stylesheet" href='{%static "css/file.css"%}' />
+    
+
+    
+</head>
+<body>
+    <div style="width:100%"> 
+              
+                <div style="width:100%">
+                    <table style="width:100%" border="0" id="certificate_table" class="nospace ">
+                        <tr>
+                            <td colspan="5" style="text-align:center;">
+                                <span>Cylinder Test Report</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>License Number</b>
+                            </td>
+                            <td>
+                                {{cng.license_no}}
+                            </td>
+                            <td>
+                                <b>Test Date</b>
+                            </td>
+                            <td>
+                                {{cng.test_date}}
+                            </td>
+                            <td rowspan="3" class="noborder">
+                                <img src="" width="100" height="100" />
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Report Number</b>
+                            </td>
+                            <td>
+                               {{cng.report_no}}
+
+                            </td>
+                            <td>
+                                <b>Next Test Due Date</b>
+                            </td>
+                            <td>
+                                {{cng.test_due_date}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Customer Name</b>
+                            </td>
+                            <td>
+                                {{cng.customer_name}}
+                            </td>
+                            <td>
+                                <b>Cylinder Number</b>
+                            </td>
+                            <td>
+                               {{cng.cylinder_no}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Vehicle Number</b>
+                            </td>
+                            <td>
+                                {{cng.vehicle_no}}
+                            </td>
+                            <td>
+                                <b>Cylinder Make</b>
+                            </td>
+                            <td>
+                                {{cng.cylinder_make}}
+                            </td>
+                            <td rowspan="3" class="nospace">
+                                
+                                <img src='{%static "images/OG_logo_png.png"%}' alt="logo" src="" width="100" height="100" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Vehicle Type</b>
+                            </td>
+                            <td>
+                                {{cng.vehicle_type}}
+                            </td>
+                            <td>
+                                <b>Cylinder Specification</b>
+                            </td>
+                            <td>
+                                {{cng.cylinder_spec}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Fuel Type</b>
+                            </td>
+                            <td>
+                                {{cng.fuel_type}}
+                            </td>
+                            <td>
+                                <b>Last Testing Date</b>
+                            </td>
+                            <td>
+                               {{cng.last_testing_date}}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Latitude</b>
+                            </td>
+                            <td>
+                                {{cng.latitude}}
+                            </td>
+                            <td>
+                                <b>Manufacturing Date</b>
+                            </td>
+                            <td>
+                                    {{cng.manufacturing_date}}
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <b>Longitude</b>
+                            </td>
+                            <td>
+                                {{cng.longitude}}
+                            </td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="4" style="text-align:center;">
+                                <b> Testing Details</b>
+                            </td>
+                            <td colspan="1" class="noborder"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Valve Inspection</b>
+                            </td>
+                            <td>
+                                {{cng.valve_inspection}}
+                            </td>
+                            <td>
+                                <b>Plate Number</b>
+                            </td>
+                            <td>
+                                {{cng.plate_no}}
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Visual Inspection</b>
+                            </td>
+                            <td>
+                                {{cng.visual_inspection}}
+                            </td>
+                            <td colspan="2">
+                                <b>Tare weight (KG.)</b>
+                            </td>
+                            <td class="noborder"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Cylinder Threading</b>
+                            </td>
+                            <td>
+                                {{cng.cylinder_threading}}
+                            </td>
+                            <td>
+                                <b>As per making</b>
+                            </td>
+                            <td>
+                                {{cng.as_pr_making}}
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Internal Inspection</b>
+                            </td>
+                            <td>
+                                {{cng.internal_inspection}}
+                            </td>
+                            <td>
+                                <b>Actual Weight</b>
+                            </td>
+                            <td>
+                                {{cng.actual_wt}}
+                            </td>
+                            <td id="nodash"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align:center;">
+                                <b>Cylinder Wall Thickness</b>
+                            </td>
+                            <td>
+                                <b>Difference in weighted</b>
+                            </td>
+                            <td>
+                                {{cng.diff_wt}}
+                            </td>
+                            <td class="noborder"></td>
+                        </tr>
+                        <tr>
+                            <td class="txt-cntr">
+                                <b>Minimum</b>
+                            </td>
+                            <td class="txt-cntr">
+                                <b>Maximum</b>
+                            </td>
+                            <td>
+                                <b>Loss of weight (%)</b>
+                            </td>
+                            <td>
+                                {{cng.loss_wt}}
+                            </td>
+                            <td class="noborder"></td>
+                        </tr>
+                        <tr>
+                            <td class="txt-cntr">
+                                {{cng.wall_thick_min}}
+                            </td>
+                            <td class="txt-cntr">
+                                {{cng.wall_thick_max}}
+                            </td>
+                            <td colspan="2" class="noborder" id="nodash"></td>
+                            <td class="noborder"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="noborder"> <b> Testing Result </b></td>
+                            <td colspan="3" class="noborder"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="noborder">
+                                <table border="0" style="border-collapse:collapse" class="nospace">
+                                    <tr>
+                                        <td>
+                                            <b>
+                                                Volumetric Capacity (Liters)
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Working Pressure (Kgf/cm2)
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Testing Pressure (Kgf/cm2)
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Total Expension TE(cc)
+                                            </b>
+                                        </td>
+                                        <td class="reqborder">
+                                            <b>
+                                                Permanent Expension TE(cc)
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Permanent Expension (%)
+                                            </b>
+                                        </td>
+                                        <td>
+                                            <b>
+                                                Result
+                                            </b>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            {{cng.vol_cap}}
+                                        </td>
+                                        <td>
+                                            {{cng.working_press}}
+                                        </td>
+                                        <td>
+                                            {{cng.testing_press}}
+                                        </td>
+                                        <td>
+                                            {{cng.total_expen}}
+                                        </td>
+                                        <td class="reqborder">
+                                            {{cng.permanent_expen}}
+                                        </td>
+                                        <td>
+                                                {{permanent_exp_per}}
+                                        </td>
+                                        <td>
+                                            Pass
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="width:100%">
+                    <ul class="rules">
+                        <li>
+                            The cylinder has been inspected and tested in accordance with the Gas Cylinder Rules,2016.
+                        </li>
+                        <li>
+                            The cylinder has been tested under supervision of a competent person and found to be free from any defects which might prove injurious to the strength of the cylinder.
+                        </li>
+                        <li>
+                            Hydrostatic stretch test must be prescribed in specification no IS:5844 (Water jacket method) is performed.
+                        </li>
+                        <li>
+                            The cylinder testing procedure is approved by the ‘PESO’ (Government of India)
+                        </li>
+                    </ul>
+                </div>
+                <div style="width:100%">
+                        <div style="width:50%;float:left;">
+                            <img class="img-responsive" alt="momos" src='{{cng.image.url}}'
+                                 style="width: 200px; height: 100px;">
+                        </div>
+                    <div style="width:44%;float:right;">
+                        <br />
+                                KWK CNG Center<br />
+                        
+                        <br />
+                        <br />
+                        Authorized Signature
+                    </div>
+                </div>
+    </div>
+
+</body>
+</html>
